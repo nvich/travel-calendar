@@ -1,0 +1,6 @@
+**/*.story.js
+**/*.test.js
+internals/
+.idea/
+.credentials/
+node_modules/
