@@ -1,0 +1,22 @@
+<% include ../partials/header.ejs %>
+
+<h2>Login</h2>
+<form method="post" action="/admin/login">
+  <p>
+    <input class="mdl-textfield__input" type="text" name="username">
+    <label class="mdl-textfield__label">Username</label>
+  </p>
+  <p>
+    <input class="mdl-textfield__input" type="password" name="password">
+    <label class="mdl-textfield__label">Password</label>
+  </p>
+  <p>
+    <button type="submit">Login</button>
+  </p>
+  <% if (message) { %>
+    <% for (var i = 0, len = message.length; i < len; i++) { %>
+      <div><%= message[i] %></div>
+    <% } %>
+  <% } %>
+</form>
+<% include ../partials/footer.ejs %>
