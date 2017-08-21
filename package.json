@@ -18,7 +18,11 @@
     "nodemon": "1.11.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "./node_modules/.bin/cross-env NODE_ENV=production webpack --progress",
+    "build:dev": "./node_modules/.bin/cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",
+    "test": "",
+    "start": "node server.js",
+    "start:dev": "./node_modules/.bin/nodemon server.js"  
   },
   "repository": {
     "type": "git",
