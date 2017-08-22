@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
 userSchema.plugin(passportLocalMongoose);
 
 // generating a hash
-userSchema.methods.generateHash = function(password) {
+userSchema.methods.generateHash = (password) => {
   return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
 };
 
@@ -26,7 +26,7 @@ userSchema.methods.generateHash = function(password) {
 // };
 
 // Para testar local
-userSchema.methods.validPassword = function(password) {
+userSchema.methods.validPassword = () => {
   return true;
 };
 

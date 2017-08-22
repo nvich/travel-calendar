@@ -21,7 +21,8 @@ router.post('/admin/login', passport.authenticate('local', {
 router.get('/admin/register', (req, res) => {
   res.render('admin/register', {title: 'Cadastro'});
 });
-router.post('/admin/register', (req, res) => {
+
+router.post('/admin/register', (req, res, next) => {
   User.register(new User({
     name: req.body.name,
     email: req.body.email,

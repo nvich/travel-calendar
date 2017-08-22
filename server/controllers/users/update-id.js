@@ -1,6 +1,6 @@
 const UserModel = require('../../models/user');
 
-module.exports = (req, res, next) => {
+module.exports = (req, res) => {
   UserModel.findById(req.params.id, (err, user) => {
     if(err) {
       res.send(err);

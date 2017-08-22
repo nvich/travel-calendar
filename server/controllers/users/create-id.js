@@ -1,6 +1,6 @@
 const UserModel = require('../../models/user');
 
-module.exports = (req, res, next) => {
+module.exports = (req, res) => {
   const user = new UserModel();
 
   user.name     = req.body.name;
