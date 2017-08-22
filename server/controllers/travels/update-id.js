@@ -12,7 +12,7 @@ module.exports = (req, res) => {
       if(err) {
         return res.send(err);
       }
-      res.json({title: 'Viagem', user: user, message: 'Viagem atualizada'});
+      res.json({title: 'Viagem', travel: travel, message: 'Viagem atualizada'});
     });
   });
 };

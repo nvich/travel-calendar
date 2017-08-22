@@ -9,6 +9,6 @@ module.exports = (req, res) => {
     if(err) {
       return res.send(err);
     }
-    res.json({ message: 'Travel created!' });
+    res.json({ message: 'Travel created!', travel: travel });
   });
 };

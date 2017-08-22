@@ -6,8 +6,8 @@ module.exports = (req, res) => {
     _id: req.params.id
   }, (err, travel) => {
     if(err) {
-      res.send(err);
+      return res.send(err);
     }
-    res.render('admin/travels/travel', {title: 'Viagem', user: user, travel: travel, message: 'Viagem deletada'});
+    res.json({travel: travel, message: 'Viagem deletada'});
   });
 };
