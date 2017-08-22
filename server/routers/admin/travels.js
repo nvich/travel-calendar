@@ -1,10 +1,8 @@
-const travelsController = require('../../../controllers/travels');
+const travelsController = require('../../controllers/travels');
 // Travels
-module.exports = (router, isAuthenticated) => {
+module.exports = (router) => {
   // get all travels
-  router.get('/admin/travels', isAuthenticated, travelsController.readAll);
-
-  router.get('/admin/travels/cadastre', travelsController.showCadastre);
+  router.get('/admin/travels', travelsController.readAll);
 
   router.post('/admin/travels/cadastre', travelsController.createId);
   // get a single travel

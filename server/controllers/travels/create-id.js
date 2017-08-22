@@ -7,8 +7,8 @@ module.exports = (req, res) => {
 
   travel.save((err, travel) => {
     if(err) {
-      res.send(err);
+      return res.send(err);
     }
-    res.render('admin/travels/cadastre', {title: 'Viagens', travel: travel});
+    res.json({ message: 'Travel created!' });
   });
 };
