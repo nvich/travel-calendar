@@ -47,9 +47,10 @@
     "chai": "4.1.1",
     "cross-env": "5.0.5",
     "css-loader": "0.28.5",
-    "eslint": "4.5.0",
-    "eslint-plugin-vue": "2.1.0",
+    "eslint": "^4.5.0",
+    "eslint-plugin-vue": "^3.12.0",
     "file-loader": "0.11.2",
+    "html-webpack-plugin": "2.30.1",
     "husky": "0.14.3",
     "jest": "20.0.4",
     "jsdom": "11.2.0",
@@ -62,15 +63,15 @@
   "scripts": {
     "build": "./node_modules/.bin/cross-env NODE_ENV=production webpack --progress --config ./internals/webpack/webpack.prod.config.js",
     "build:dev": "./node_modules/.bin/cross-env NODE_ENV=development webpack-dev-server --open --inline --hot --config ./internals/webpack/webpack.dev.config.js",
-    "lint": "yarn lint:js",
-    "lint:js": "eslint ./",
-    "precommit": "yarn lint",
-    "prepush": "yarn test",
+    "lint": "npm run lint:js",
+    "lint:js": "./node_modules/.bin/eslint ./ --ext=js,vue",
+    "precommit": "npm run lint",
+    "prepush": "npm run test",
     "start": "node server.js",
     "start:dev": "./node_modules/.bin/nodemon server.js",
-    "test": "jest --setupTestFrameworkScriptFile=./internals/test/setup.js --testRegex=/source/.*.test.js",
-    "test:tdd": "yarn test -- --watch",
-    "test:coverage": "yarn test -- --coverage --coverageDirectory=coverage"
+    "test": "./node_modules/.bin/jest --setupTestFrameworkScriptFile=./internals/test/setup.js --testRegex=/source/.*.test.js",
+    "test:tdd": "npm run test -- --watch",
+    "test:coverage": "npm run test -- --coverage --coverageDirectory=coverage"
   },
   "repository": {
     "type": "git",
@@ -84,6 +85,13 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/descco-group/travel-calendar/issues"
+  },
+  "engines": {
+    "node": ">=6.10.3",
+    "npm": ">=3.10.10"
+  },
+  "directories": {
+    "doc": "docs"
   },
   "homepage": "https://github.com/descco-group/travel-calendar#readme"
 }

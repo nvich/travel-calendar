@@ -5,6 +5,6 @@ module.exports = (req, res, next) => {
     if (err) {
       res.send(err);
     }
-    res.render('admin/users/user', {title: "Usuário", user: user});
+    res.render('admin/users/user', {title: 'Usuário', user: user});
   });
 };

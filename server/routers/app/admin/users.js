@@ -12,4 +12,4 @@ module.exports = (router, isAuthenticated) => {
 
   // delete a user
   router.delete('/admin/users/:id', usersController.deleteUser);
-}
+};

@@ -15,7 +15,7 @@ module.exports = (req, res, next) => {
       if(err) {
         res.send(err);
       }
-      res.render('admin/users/user', {title: "Usuário", user: user, message: 'Usuário atualizado'});
-    })
+      res.render('admin/users/user', {title: 'Usuário', user: user, message: 'Usuário atualizado'});
+    });
   });
 };

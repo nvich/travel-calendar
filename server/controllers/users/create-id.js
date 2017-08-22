@@ -12,6 +12,6 @@ module.exports = (req, res, next) => {
     if(err) {
       res.send(err);
     }
-    res.render('admin/users/cadastre', {title: "Usuário", user: user, message: 'Usuário criado'});
+    res.render('admin/users/cadastre', {title: 'Usuário', user: user, message: 'Usuário criado'});
   });
 };

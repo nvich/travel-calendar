@@ -19,7 +19,7 @@ router.post('/admin/login', passport.authenticate('local', {
 }));
 
 router.get('/admin/register', (req, res) => {
-  res.render('admin/register', {title: "Cadastro"});
+  res.render('admin/register', {title: 'Cadastro'});
 });
 router.post('/admin/register', (req, res) => {
   User.register(new User({
@@ -43,10 +43,10 @@ router.post('/admin/register', (req, res) => {
 });
 
 router.get('/admin/dashboard', isAuthenticated, (req, res) => {
-  res.render('admin/dashboard', {title: "Dashboard"});
+  res.render('admin/dashboard', {title: 'Dashboard'});
 });
 router.get('/admin/login', (req, res) => {
-  res.render('admin/login', {title: "Login", message: req.flash('loginMessage') });
+  res.render('admin/login', {title: 'Login', message: req.flash('loginMessage') });
 });
 router.get('/admin/logout', isAuthenticated, (req, res) => {
   req.logout();

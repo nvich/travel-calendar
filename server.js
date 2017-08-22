@@ -19,5 +19,5 @@ require('./server/config/routers')(app);
 
 // Start server
 app.listen(envConfig.port, function(){
-  console.log('Server listening on port ' + envConfig.port)
+  console.log('Server listening on port ' + envConfig.port);
 });

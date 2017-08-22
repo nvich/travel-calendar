@@ -2,9 +2,13 @@
   "env": {
     "browser": true,
     "es6": true,
-    "jest": true
+    "jest": true,
+    "node": true
   },
-  "extends": ["eslint:recommended", "plugin:vue/recommended"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/recommended"
+  ],
   "plugins": [
     "vue"
   ],

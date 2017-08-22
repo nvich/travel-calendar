@@ -13,4 +13,4 @@ module.exports = (router, isAuthenticated) => {
   router.put('/admin/travels/:id', travelsController.updateId);
   // delete a travel
   router.delete('/admin/travels/:id', travelsController.deleteId);
-}
+};
