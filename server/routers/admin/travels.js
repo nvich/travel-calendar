@@ -3,8 +3,7 @@ const travelsController = require('../../controllers/travels');
 module.exports = (router) => {
   // get all travels
   router.get('/admin/travels', travelsController.readAll);
-
-  router.post('/admin/travels/cadastre', travelsController.createId);
+  router.post('/admin/travels', travelsController.createId);
   // get a single travel
   router.get('/admin/travels/:id', travelsController.readId);
   // update a travel

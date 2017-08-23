@@ -1,7 +1,6 @@
 const TravelModel = require('../../models/travel');
 
 module.exports = (req, res) => {
-  const user = 'undefined';
   TravelModel.remove({
     _id: req.params.id
   }, (err, travel) => {
