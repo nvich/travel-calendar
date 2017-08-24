@@ -1,21 +1,25 @@
 const webpack = require('webpack');
 const yargs = require('yargs');
 const path = require('path');
+const HtmlPlugin = require('html-webpack-plugin');
 const options = yargs
-  .alias('p', 'optimize-minimize')
-  .alias('d', 'debug')
   .option('port', {
-    default: '8080',
+    default: '3000',
     type: 'string'
   })
   .argv;
 
 const baseConfig = {
-  entry: './client/js/main.js',
+  entry: [
+    'babel-polyfill',
+    'webpack-dev-server/client?http://localhost:3000',
+    'webpack/hot/only-dev-server',
+    path.resolve(__dirname, '../../client/js', 'main')
+  ],
   output: {
-    path: './public',
-    publicPath: '/public/',
-    filename: 'js/scripts.min.js'
+    path: path.resolve(__dirname, '../../public'),
+    filename: 'js/scripts.min.js',
+    publicPath: '/'
   },
   resolve: {
     alias: {
@@ -92,23 +96,12 @@ const baseConfig = {
       }
     ]
   },
-  devServer: {
-    historyApiFallback: true,
-    noInfo: true
-  },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: 'development'
-      }
-    }),
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      },
-      comments: false,
-      sourceMap: false
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlPlugin({
+      title: 'Campaign Dev',
+      filename: 'index.html',
+      template: 'public/index.dev.ejs'
     })
   ],
   devtool: 'source-map',

@@ -4,3 +4,4 @@ internals/
 .idea/
 .credentials/
 node_modules/
+public/

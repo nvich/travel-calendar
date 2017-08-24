@@ -1,6 +1,14 @@
 <template>
-  <div id="app">
-    <h1>{{ msg }}</h1>
+  <div class="wrapper">
+    <ul>
+      <li>
+        <router-link to="/foo">Go to Foo</router-link>
+      </li>
+      <li>
+        <router-link to="/bar">Go to Bar</router-link>
+      </li>
+    </ul>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -9,17 +17,17 @@ export default {
   name: 'app',
   data() {
     return {
-      msg: 'Test'
+      msg: 'Travel Calendar'
     };
   }
 };
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+.wrapper {
+  font-family: Arial, sans-serif;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 10px;
 }
 </style>

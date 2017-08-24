@@ -3,18 +3,16 @@ const yargs = require('yargs');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 const options = yargs
-  .alias('p', 'optimize-minimize')
-  .alias('d', 'debug')
   .option('port', {
-    default: '8080',
+    default: '3000',
     type: 'string'
   })
   .argv;
 
 const baseConfig = {
-  entry: './client/js/main.js',
+  entry: path.resolve(__dirname, '../../client/js/main.js'),
   output: {
-    path: './public',
+    path: path.resolve(__dirname, '../../public'),
     publicPath: '/public/',
     filename: 'js/scripts.min.js'
   },
@@ -94,11 +92,6 @@ const baseConfig = {
     ]
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: 'production'
-      }
-    }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
