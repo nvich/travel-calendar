@@ -2,10 +2,7 @@
   <div class="wrapper">
     <ul>
       <li>
-        <router-link to="/foo">Go to Foo</router-link>
-      </li>
-      <li>
-        <router-link to="/bar">Go to Bar</router-link>
+        <router-link to="/travels">Viagens</router-link>
       </li>
     </ul>
     <router-view></router-view>

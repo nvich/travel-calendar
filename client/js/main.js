@@ -1,15 +1,14 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './app.vue';
+import TravelsView from './pages/travels/index.vue';
 
 Vue.use(VueRouter);
 
-const Foo = { template: '<div>foo</div>' };
-const Bar = { template: '<div>bar</div>' };
+const Travels = { render: h => h(TravelsView) };
 
 const routes = [
-  { path: '/foo', component: Foo },
-  { path: '/bar', component: Bar }
+  { path: '/travels', component: Travels },
 ];
 
 const router = new VueRouter({
