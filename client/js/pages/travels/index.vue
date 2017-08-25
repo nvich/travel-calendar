@@ -1,5 +1,5 @@
 <script>
-import axios from 'axios';
+import { getAll } from '../../services/travels';
 
 export default {
   name: 'travels',
@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     fetchTravels() {
-      axios.get('http://localhost:3000/admin/travels')
+      getAll()
         .then(response => {
           this.travels = response.data;
         });
@@ -26,7 +26,7 @@ export default {
   <div class="travels">
     <ul>
       <li v-for="travel in travels" :key="travel._id">
-        {{ travel.title }}
+        <h2><router-link :to="{path: '/travels/'+travel._id}">{{ travel.title }}</router-link></h2>
       </li>
     </ul>
   </div>

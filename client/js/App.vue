@@ -2,6 +2,7 @@
   <div class="wrapper">
     <ul>
       <li>
+        <router-link to="/">Home</router-link>
         <router-link to="/travels">Viagens</router-link>
       </li>
     </ul>
