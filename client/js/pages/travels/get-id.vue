@@ -26,7 +26,7 @@ export default {
   <div class="travel">
     <form action="">
       <fieldset>
-        <legend></legend>
+        <legend>Dados</legend>
         <p>
           <label>Título:</label>
           <input type="text" v-model="travel.title">
@@ -42,6 +42,76 @@ export default {
         <p>
           <label>Data final:</label>
           <input type="text" v-model="travel.formattedEndDate">
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Pessoas</legend>
+        <p>
+          <label>Adultos:</label>
+          <input type="text" v-model="travel.users.adults">
+        </p>
+        <p>
+          <h3>Crianças: {{ travel.users.children.length }}</h3>
+          <ul>
+            <li v-for="(children, index) in travel.users.children" :key="index">
+              <label>Idade:</label>
+              <input type="text" v-model="children.age">
+            </li>
+          </ul>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Orçamento</legend>
+        <p>
+          <h3>Companhias aéreas: {{ travel.budget.payload.planeTickets.length }}</h3>
+          <ul>
+            <li v-for="(planeTicket, index) in travel.budget.payload.planeTickets" :key="index">
+              <label>Nome:</label>
+              <input type="text" v-model="planeTicket.name">
+
+              <label>URL:</label>
+              <input type="text" v-model="planeTicket.url">
+
+              <label>Valor:</label>
+              <input type="text" v-model="planeTicket.value">
+            </li>
+          </ul>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Hospedagem</legend>
+        <p>
+          <h3>Hóteis: {{ travel.budget.payload.accommodations.length }}</h3>
+          <ul>
+            <li v-for="(accommodation, index) in travel.budget.payload.accommodations" :key="index">
+              <label>Nome:</label>
+              <input type="text" v-model="accommodation.name">
+
+              <label>URL:</label>
+              <input type="text" v-model="accommodation.url">
+
+              <label>Valor:</label>
+              <input type="text" v-model="accommodation.value">
+            </li>
+          </ul>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Extras</legend>
+        <p>
+          <h3>Items: {{ travel.budget.payload.extras.length }}</h3>
+          <ul>
+            <li v-for="(extra, index) in travel.budget.payload.extras" :key="index">
+              <label>Nome:</label>
+              <input type="text" v-model="extra.name">
+
+              <label>Descrição:</label>
+              <input type="text" v-model="extra.description">
+
+              <label>Valor:</label>
+              <input type="text" v-model="extra.value">
+            </li>
+          </ul>
         </p>
       </fieldset>
     </form>
