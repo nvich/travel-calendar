@@ -21,11 +21,10 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import '../../node_modules/@descco/ui-core/lib/scss/style.scss';
+
 .wrapper {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 10px;
+  padding: 10px;
 }
 </style>

@@ -10,8 +10,8 @@ const Travels = { render: h => h(TravelsView) };
 const Travel = { render: h => h(TravelView) };
 
 const routes = [
-  { path: '/travels', component: Travels },
-  { path: '/travels/:id', component: Travel },
+  { path: '/travels', name: 'travels', component: Travels },
+  { path: '/travels/:id', name: 'travel', component: Travel },
 ];
 
 const router = new VueRouter({

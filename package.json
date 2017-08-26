@@ -4,6 +4,7 @@
   "description": "Travel calendar",
   "main": "index.js",
   "dependencies": {
+    "@descco/ui-core": "0.2.0",
     "axios": "0.16.2",
     "body-parser": "1.17.2",
     "cors": "2.8.4",

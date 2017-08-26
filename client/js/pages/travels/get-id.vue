@@ -18,6 +18,9 @@ export default {
           this.travel = response.data;
         });
     },
+  },
+  watch: {
+    '$route': 'fetchTravel'
   }
 };
 </script>
@@ -127,6 +130,9 @@ export default {
 }
 
 .travel input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
   width: 100%;
 }
 </style>
