@@ -38,3 +38,12 @@ node server
 
 - travel.calendar.hn@gmail.com
 - hemersonnaiara
+
+## Travels
+
+- 29/07 - Paraty
+- 08-09-10/09 - Angra dos Reis
+- 23-24/09 - Petropolis
+- 30/09 - 01/10 - Petropolis
+- 14-15/10 - Saquarema
+- 21-22/10 - Cabo Frio
