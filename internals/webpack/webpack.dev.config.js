@@ -99,7 +99,7 @@ const baseConfig = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlPlugin({
-      title: 'Campaign Dev',
+      title: 'Travels Dev',
       filename: 'index.html',
       template: 'public/index.dev.ejs'
     })
