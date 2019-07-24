@@ -1,6 +1,6 @@
 {
   "name": "@descco/travel-calendar",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Travel calendar",
   "main": "index.js",
   "dependencies": {
