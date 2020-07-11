@@ -1,5 +1,5 @@
 {
-  "name": "@descco/travel-calendar",
+  "name": "@nvich/travel-calendar",
   "version": "0.1.1",
   "description": "Travel calendar",
   "main": "index.js",
@@ -74,7 +74,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/descco-group/travel-calendar.git"
+    "url": "git+https://github.com/nvich/travel-calendar.git"
   },
   "keywords": [
     "travel",
@@ -83,7 +83,7 @@
   "author": "Hemerson Vianna",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/descco-group/travel-calendar/issues"
+    "url": "https://github.com/nvich/travel-calendar/issues"
   },
   "engines": {
     "node": ">=6.10.3",
@@ -92,5 +92,5 @@
   "directories": {
     "doc": "docs"
   },
-  "homepage": "https://github.com/descco-group/travel-calendar#readme"
+  "homepage": "https://github.com/nvich/travel-calendar#readme"
 }
