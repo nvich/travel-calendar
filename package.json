@@ -13,7 +13,7 @@
     "express": "4.15.4",
     "extract-text-webpack-plugin": "3.0.0",
     "google-auth-library": "0.10.0",
-    "googleapis": "20.1.0",
+    "googleapis": "39.1.0",
     "method-override": "2.3.9",
     "moment": "2.19.3",
     "mongodb": "2.2.31",
