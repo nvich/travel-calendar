@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@descco/ui-core": "0.2.0",
-    "axios": "0.16.2",
+    "axios": "0.21.1",
     "body-parser": "1.17.2",
     "cors": "2.8.4",
     "ejs": "2.5.7",
