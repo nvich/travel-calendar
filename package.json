@@ -15,7 +15,7 @@
     "google-auth-library": "0.10.0",
     "googleapis": "20.1.0",
     "method-override": "2.3.9",
-    "moment": "2.19.3",
+    "moment": "2.29.2",
     "mongodb": "2.2.31",
     "mongoose": "4.11.7",
     "node-sass": "4.5.3",
